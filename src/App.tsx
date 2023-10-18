@@ -80,7 +80,7 @@ export function App() {
           </div>
         </Styles.Hero>
         <Styles.Differentials>
-          <h2>Nossos diferencial</h2>
+          <h2>Nossos diferenciais</h2>
 
           <div className="content-card">
             <div className="card">
