@@ -142,7 +142,67 @@ const Hero = styled.section`
   }
 `
 
+const Differentials = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 433px;
+
+  h2 {
+    margin-top: 60px;
+    font-size: 2.25rem;
+  }
+
+  .content-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    margin-top: 50px;
+
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+
+      margin: 0 66px;
+
+      width: 292px;
+      padding: 20px 20px 40px 20px;
+      gap: 18px;
+
+      border-radius: 4px;
+      border: 1.4px solid #e0e3eb;
+
+      h2 {
+        color: ${({ theme }) => theme.colors.gray_700};
+        font-size: 1.25rem;
+      }
+
+      p {
+        color: ${({ theme }) => theme.colors.gray_400};
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 960px) {
+    .content-card {
+      align-items: center;
+      flex-direction: column;
+
+      .card {
+        margin: 24px 0;
+      }
+    }
+  }
+`
+
 export default {
+  Differentials,
   Container,
   Header,
   Hero,

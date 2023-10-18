@@ -1,10 +1,13 @@
-import theme from './global/styles/theme'
+import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { Sling as Hamburger } from 'hamburger-react'
 import { GlobalStyle } from './global/styles/global'
+import theme from './global/styles/theme'
 
-import { useState } from 'react'
 import Logo from './assets/logo.svg'
+import VerifyIcon from './assets/verify.svg'
+import SecurityIcon from './assets/security.svg'
+import EfficiencyIcon from './assets/efficiency.svg'
 import Styles from './global/styles'
 
 export function App() {
@@ -76,6 +79,35 @@ export function App() {
             <div />
           </div>
         </Styles.Hero>
+        <Styles.Differentials>
+          <h2>Nossos diferencial</h2>
+
+          <div className="content-card">
+            <div className="card">
+              <img src={VerifyIcon} alt="" />
+
+              <strong>Qualidade</strong>
+
+              <p>Lorem ipsum</p>
+            </div>
+
+            <div className="card">
+              <img src={SecurityIcon} alt="" />
+
+              <strong>Segurança</strong>
+
+              <p>Lorem ipsum</p>
+            </div>
+
+            <div className="card">
+              <img src={EfficiencyIcon} alt="" />
+
+              <strong>Eficiência</strong>
+
+              <p>Lorem ipsum</p>
+            </div>
+          </div>
+        </Styles.Differentials>
       </Styles.Container>
       <GlobalStyle />
     </ThemeProvider>
