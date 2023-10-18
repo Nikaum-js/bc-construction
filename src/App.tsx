@@ -108,6 +108,28 @@ export function App() {
             </div>
           </div>
         </Styles.Differentials>
+        <Styles.AboutUs>
+          <div className="content-card">
+            <div className="white-card">
+              <div className="banner-logo"></div>
+            </div>
+            <div className="brown-card">
+              <div className="about-us-content">
+                <h2>Sobre Nós</h2>
+
+                <p>
+                  Prezamos por essa proximidade, o cliente acaba se tornando um
+                  amigo, pois a relação de confiança precisa existir para
+                  tornarmos juntos seu sonho uma realidade seja ele para sua
+                  casa, escritório ou negócio!!!
+                </p>
+              </div>
+
+              <button>Saiba mais</button>
+            </div>
+          </div>
+        </Styles.AboutUs>
+        <Styles.OurServices></Styles.OurServices>
       </Styles.Container>
       <GlobalStyle />
     </ThemeProvider>

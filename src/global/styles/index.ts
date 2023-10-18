@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import HeroImg from '../../assets/hero.jpg'
+import LogoBanner from '../../assets/logoBaner.png'
 
 interface HamburgerMenuHeaderProps {
   showMenu: boolean
@@ -116,6 +117,18 @@ const Header = styled.header<HamburgerMenuHeaderProps>`
       }
     }
   }
+
+  @media (max-width: 1080px) {
+    padding: 0 1rem;
+
+    nav {
+      ul {
+        li {
+          padding: 0 16px;
+        }
+      }
+    }
+  }
 `
 
 const Hero = styled.section`
@@ -148,7 +161,7 @@ const Differentials = styled.div`
   align-items: center;
 
   width: 100%;
-  height: 433px;
+  height: 100%;
 
   h2 {
     margin-top: 60px;
@@ -201,9 +214,133 @@ const Differentials = styled.div`
   }
 `
 
+const AboutUs = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  margin-top: 50px;
+
+  .content-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    position: relative;
+
+    .white-card {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      width: 50%;
+      height: 669px;
+      background: #fefefe;
+
+      .banner-logo {
+        width: 60%;
+        height: 60%;
+        background-image: url(${LogoBanner});
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      box-shadow:
+        0px 8px 8px -4px rgba(17, 24, 39, 0.04),
+        0px 20px 24px -4px rgba(17, 24, 39, 0.1);
+    }
+
+    .brown-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      position: absolute;
+      right: 220px;
+
+      width: 420px;
+      height: 523px;
+
+      padding: 50px 40px;
+
+      border-radius: 2px;
+      background: ${({ theme }) => theme.colors.secondary};
+
+      .about-us-content {
+        h2 {
+          margin-bottom: 38px;
+
+          color: ${({ theme }) => theme.colors.white};
+          font-size: 2.25rem;
+        }
+
+        p {
+          color: ${({ theme }) => theme.colors.white};
+          font-size: 1.25rem;
+        }
+      }
+
+      button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 16px 20px;
+        border-radius: 6px;
+        gap: 10px;
+
+        border: 2px solid ${({ theme }) => theme.colors.secondary};
+        background: ${({ theme }) => theme.colors.gray_100};
+
+        color: ${({ theme }) => theme.colors.secondary};
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media (max-width: 1080px) {
+    .content-card {
+      .white-card {
+        display: none;
+      }
+
+      .brown-card {
+        position: static;
+      }
+    }
+  }
+
+  @media (max-width: 460px) {
+    .content-card {
+      .brown-card {
+        width: 320px;
+        height: 523px;
+      }
+    }
+  }
+`
+
+const OurServices = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  margin-top: 50px;
+`
+
 export default {
   Differentials,
+  OurServices,
   Container,
+  AboutUs,
   Header,
   Hero,
 }

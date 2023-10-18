@@ -12,6 +12,7 @@ export default {
     gray_900: '#14171F',
 
     primary: '#996B46',
+    secondary: '#593c25',
   },
   fonts: {
     primary: 'Work Sans',
