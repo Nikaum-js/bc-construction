@@ -40,19 +40,19 @@ export function App() {
           <nav>
             <ul>
               <li>
-                <a href="">Home</a>
+                <a href="#home">Home</a>
               </li>
               <li>
-                <a href="">Sobre Nós</a>
+                <a href="#differentials">Sobre Nós</a>
               </li>
               <li>
-                <a href="">Nossos Serviços</a>
+                <a href="#about-us">Nossos Serviços</a>
               </li>
               <li>
                 <a href="">Portfólio</a>
               </li>
               <li>
-                <a href="">Contato</a>
+                <a href="#contact">Contato</a>
               </li>
             </ul>
           </nav>
@@ -68,32 +68,40 @@ export function App() {
             <nav className="responsive-navbar">
               <ul>
                 <li>
-                  <a href="">Home</a>
+                  <a href="#home" onClick={() => setShowMenu(false)}>
+                    Home
+                  </a>
                 </li>
                 <li>
-                  <a href="">Sobre Nós</a>
+                  <a href="#about-us" onClick={() => setShowMenu(false)}>
+                    Sobre Nós
+                  </a>
                 </li>
                 <li>
-                  <a href="">Nossos Serviços</a>
+                  <a href="#our-services" onClick={() => setShowMenu(false)}>
+                    Nossos Serviços
+                  </a>
                 </li>
                 <li>
                   <a href="">Portfólio</a>
                 </li>
                 <li>
-                  <a href="">Contato</a>
+                  <a href="#contact" onClick={() => setShowMenu(false)}>
+                    Contato
+                  </a>
                 </li>
               </ul>
             </nav>
           )}
         </Styles.Header>
-        <Styles.Hero>
+        <Styles.Hero id="home">
           <div className="HeroImg">
             <h1>Seu sonho, nossa missão</h1>
 
             <div />
           </div>
         </Styles.Hero>
-        <Styles.Differentials>
+        <Styles.Differentials id="differentials">
           <h2>Nossos diferenciais</h2>
 
           <div className="content-card">
@@ -122,7 +130,7 @@ export function App() {
             </div>
           </div>
         </Styles.Differentials>
-        <Styles.AboutUs>
+        <Styles.AboutUs id="about-us">
           <div className="content-card">
             <div className="white-card">
               <div className="banner-logo"></div>
@@ -143,7 +151,7 @@ export function App() {
             </div>
           </div>
         </Styles.AboutUs>
-        <Styles.OurServices>
+        <Styles.OurServices id="our-services">
           <h2>Nossos Serviços</h2>
 
           <div className="content-card card-white">
@@ -242,7 +250,7 @@ export function App() {
             </div>
           </div>
         </Styles.OurClients>
-        <Styles.Contact>
+        <Styles.Contact id="contact">
           <div className="content-contact">
             <div className="info-contact">
               <h2>Consultoria de projetos com qualidade</h2>
@@ -259,6 +267,29 @@ export function App() {
             <button>Entre em contato</button>
           </div>
         </Styles.Contact>
+        <Styles.ContactForm>
+          <div className="content-contact-form">
+            <h2>Entre em contato, orçe ja!</h2>
+
+            <p>Entre em contato conosco, nossos time especializado</p>
+
+            <form action="">
+              <div className="column-input">
+                <input type="text" placeholder="Nome *" />
+
+                <input type="text" placeholder="Email *" />
+
+                <input type="text" placeholder="Motivo para contato *" />
+
+                <input type="text" placeholder="Telefone" />
+              </div>
+
+              <textarea placeholder="Mensagem *" />
+
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+        </Styles.ContactForm>
         <Styles.Footer>
           <div className="content-footer">
             <div className="contact-info">

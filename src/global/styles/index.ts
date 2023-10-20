@@ -165,7 +165,7 @@ const Differentials = styled.div`
   height: 100%;
 
   h2 {
-    margin-top: 60px;
+    margin-top: 120px;
     font-size: 2.25rem;
   }
 
@@ -175,6 +175,7 @@ const Differentials = styled.div`
     width: 100%;
 
     margin-top: 50px;
+    margin-bottom: 120px;
 
     .card {
       display: flex;
@@ -204,9 +205,16 @@ const Differentials = styled.div`
   }
 
   @media (max-width: 960px) {
+    h2 {
+      margin-top: 60px;
+    }
+
     .content-card {
       align-items: center;
       flex-direction: column;
+
+      margin-top: 20px;
+      margin-bottom: 10px;
 
       .card {
         margin: 24px 0;
@@ -409,6 +417,7 @@ const OurServices = styled.div`
 
       .card {
         margin: 16px 62px;
+        width: 240px;
       }
     }
   }
@@ -735,6 +744,116 @@ const Contact = styled.div`
     }
 `
 
+const ContactForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: ${({ theme }) => theme.colors.gray_100};
+
+  padding: 48px 0;
+
+  width: 100%;
+  height: 100%;
+
+  .content-contact-form {
+    h2 {
+      color: ${({ theme }) => theme.colors.gray_800};
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      color: ${({ theme }) => theme.colors.gray_800};
+      text-align: center;
+      font-size: 1.25rem;
+
+      margin-bottom: 62px;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .column-input {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        input {
+          display: flex;
+          width: 280px;
+          padding: 10px 8px;
+          align-items: center;
+          gap: 10px;
+          border-radius: 4px;
+          border: 1px solid #e0e3eb;
+          background: ${({ theme }) => theme.colors.white};
+
+          color: #a3aac2;
+          font-size: 1.125rem;
+        }
+      }
+
+      textarea {
+        display: flex;
+        width: 592px;
+        height: 135px;
+        padding: 10px 8px;
+        align-items: flex-start;
+        gap: 10px;
+        resize: none;
+
+        border-radius: 4px;
+        border: 1px solid #e0e3eb;
+        background: ${({ theme }) => theme.colors.white};
+
+        color: #a3aac2;
+
+        font-size: 1.125rem;
+
+        margin-top: 20px;
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 271px;
+        padding: 16px 20px;
+        gap: 10px;
+
+        background: ${({ theme }) => theme.colors.secondary};
+
+        color: ${({ theme }) => theme.colors.white};
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 600;
+
+        margin-top: 48px;
+      }
+    }
+  }
+
+  @media (max-width: 620px) {
+    .content-contact-form {
+      form {
+        textarea {
+          width: 280px;
+        }
+
+        .column-input {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+  }
+`
+
 const Footer = styled.footer`
   width: 100%;
   height: 100%;
@@ -889,6 +1008,7 @@ const Footer = styled.footer`
 export default {
   Differentials,
   OurServices,
+  ContactForm,
   OurClients,
   Container,
   Contact,
