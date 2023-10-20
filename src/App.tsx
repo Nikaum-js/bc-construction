@@ -8,6 +8,17 @@ import Logo from './assets/logo.svg'
 import VerifyIcon from './assets/verify.svg'
 import SecurityIcon from './assets/security.svg'
 import EfficiencyIcon from './assets/efficiency.svg'
+import MasonryIcon from './assets/masonry.svg'
+import DrywallIcon from './assets/drywall.svg'
+import ReformIcon from './assets/reform.svg'
+import ConstructionsIcon from './assets/constructions.svg'
+import ProjectIcon from './assets/project.svg'
+import ElectricIcon from './assets/electric.svg'
+import HandIcon from './assets/hand.png'
+import NotesIcon from './assets/notes.png'
+import TrophyIcon from './assets/trophy.png'
+import PlansIcon from './assets/plans.png'
+
 import Styles from './global/styles'
 
 export function App() {
@@ -129,7 +140,106 @@ export function App() {
             </div>
           </div>
         </Styles.AboutUs>
-        <Styles.OurServices></Styles.OurServices>
+        <Styles.OurServices>
+          <h2>Nossos Serviços</h2>
+
+          <div className="content-card card-white">
+            <div className="card">
+              <img src={MasonryIcon} alt="" />
+              <div className="line"></div>
+
+              <strong>Alvenaria</strong>
+            </div>
+
+            <div className="card card-brown">
+              <img src={DrywallIcon} alt="" />
+              <div className="line"></div>
+
+              <strong>Steel frame & Drywall</strong>
+            </div>
+
+            <div className="card card-white">
+              <img src={ReformIcon} alt="" />
+              <div className="line"></div>
+
+              <strong>Construções & Reforma</strong>
+            </div>
+
+            <div className="card card-brown">
+              <img src={ConstructionsIcon} alt="" />
+              <div className="line"></div>
+
+              <strong>Gestão de obras</strong>
+            </div>
+
+            <div className="card card-white">
+              <img src={ProjectIcon} alt="" />
+              <div className="line"></div>
+
+              <strong>Projetos</strong>
+            </div>
+
+            <div className="card card-brown">
+              <img src={ElectricIcon} alt="" />
+              <div className="line"></div>
+
+              <strong>Instalações eletricas</strong>
+            </div>
+          </div>
+        </Styles.OurServices>
+        <Styles.OurClients>
+          <div className="content-our-clients">
+            <div className="content-stats">
+              <div className="card-stats hand">
+                <strong>##</strong>
+                <img src={HandIcon} alt="" />
+                <div className="footer-card-stats">
+                  <div className="line-orange" />
+                  <p>Clientes</p>
+                </div>
+              </div>
+
+              <div className="card-stats notes">
+                <strong>##</strong>
+                <img src={NotesIcon} alt="" />
+                <div className="footer-card-stats">
+                  <div className="line-orange" />
+                  <p>Projetos</p>
+                </div>
+              </div>
+
+              <div className="card-stats trophy">
+                <strong>##</strong>
+                <img src={TrophyIcon} alt="" />
+                <div className="footer-card-stats">
+                  <div className="line-orange" />
+                  <p>Metros quadrados</p>
+                </div>
+              </div>
+
+              <div className="card-stats plans">
+                <strong>##</strong>
+                <img src={PlansIcon} alt="" />
+                <div className="footer-card-stats">
+                  <div className="line-orange" />
+                  <p>Cidades</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="know-more">
+              <h2>Nossos Clientes</h2>
+
+              <p>
+                Lorem ipsum dolor sit amet. A voluptate facere qui voluptatem
+                aperiam in quia itaque est assumenda enim ut pariatur ratione.
+              </p>
+
+              <button>Saiba mais</button>
+            </div>
+          </div>
+        </Styles.OurClients>
+        <Styles.Contact></Styles.Contact>
       </Styles.Container>
       <GlobalStyle />
     </ThemeProvider>

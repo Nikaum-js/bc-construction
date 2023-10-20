@@ -42,7 +42,7 @@ const Header = styled.header<HamburgerMenuHeaderProps>`
     ${({ showMenu }) =>
       showMenu &&
       css`
-        position: fixed !important;
+        position: fixed;
         right: 28px;
       `}
   }
@@ -330,6 +330,349 @@ const OurServices = styled.div`
   flex-direction: column;
   align-items: center;
 
+  background-color: ${({ theme }) => theme.colors.gray_100};
+
+  width: 100%;
+  height: 100%;
+
+  margin-top: 50px;
+
+  h2 {
+    color: ${({ theme }) => theme.colors.gray_800};
+    margin-top: 60px;
+    font-size: 2.25rem;
+  }
+
+  .content-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    margin-top: 50px;
+
+    .card-brown {
+      background: ${({ theme }) => theme.colors.secondary};
+
+      strong {
+        color: ${({ theme }) => theme.colors.white};
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+    }
+
+    .card-white {
+      background: ${({ theme }) => theme.colors.white};
+
+      strong {
+        text-align: center;
+        color: ${({ theme }) => theme.colors.secondary};
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      margin: 48px 62px;
+
+      width: 271px;
+      padding: 20px;
+      height: 181px;
+      gap: 20px;
+
+      border-radius: 4px;
+      box-shadow: 0px 0px 37px -2px rgba(17, 24, 39, 0.05);
+
+      .line {
+        width: 60px;
+        height: 2px;
+        background: #e0e3eb;
+      }
+    }
+  }
+
+  @media (max-width: 1240px) {
+    .content-card {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 840px) {
+    .content-card {
+      grid-template-columns: repeat(1, 1fr);
+
+      .card {
+        margin: 16px 62px;
+      }
+    }
+  }
+`
+
+const OurClients = styled.div`
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  margin-top: 50px;
+
+  .content-our-clients {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    .content-stats {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      width: 50%;
+
+      .hand {
+        width: 280px;
+        position: absolute;
+        left: 200px;
+        bottom: -50px;
+        z-index: 2;
+
+        img {
+          position: absolute;
+          right: -48px;
+          top: -30px;
+        }
+      }
+
+      .notes {
+        width: 361px;
+
+        img {
+          position: absolute;
+          left: -48px;
+          top: -30px;
+        }
+      }
+
+      .trophy {
+        width: 300px;
+        position: absolute;
+        left: 200px;
+        bottom: 50px;
+        z-index: 2;
+
+        img {
+          position: absolute;
+          right: -48px;
+          top: -30px;
+        }
+      }
+
+      .plans {
+        width: 361px;
+
+        position: absolute;
+        left: 10px;
+        bottom: 80px;
+
+        img {
+          position: absolute;
+          right: -48px;
+          top: 120px;
+        }
+      }
+
+      .card-stats {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+
+        padding: 30px;
+        gap: 2px;
+
+        border-radius: 4px;
+        border: 1px solid ${({ theme }) => theme.colors.white};
+        background: ${({ theme }) => theme.colors.white};
+
+        box-shadow:
+          0px 4px 6px -2px rgba(17, 24, 39, 0.05),
+          0px 12px 16px -4px rgba(17, 24, 39, 0.1);
+
+        strong {
+          color: #292e3d;
+          font-size: 4.5rem;
+          font-weight: 600;
+        }
+
+        .footer-card-stats {
+          .line-orange {
+            position: absolute;
+
+            width: 7px;
+            align-self: stretch;
+            background: #f9995d;
+            height: 28px;
+          }
+
+          P {
+            margin-left: 14px;
+            color: #667299;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .know-more {
+      height: 100%;
+      width: 359px;
+      margin-top: 140px;
+
+      h2 {
+        margin-bottom: 40px;
+
+        color: ${({ theme }) => theme.colors.secondary};
+        font-size: 3.75rem;
+        font-weight: 700;
+      }
+
+      p {
+        color: #525b7a;
+        font-size: 1.25rem;
+
+        margin-bottom: 20px;
+      }
+
+      button {
+        display: flex;
+        width: 176px;
+        padding: 16px 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 2px;
+        background: ${({ theme }) => theme.colors.secondary};
+
+        color: ${({ theme }) => theme.colors.white};
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media (max-width: 1240px) {
+    .content-our-clients {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .know-more {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 840px) {
+    .content-our-clients {
+      .content-stats {
+        gap: 20px;
+
+        .hand {
+          width: 320px;
+          position: relative;
+
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+        }
+
+        .notes {
+          width: 320px;
+          position: relative;
+
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+
+          img {
+            z-index: 2;
+            position: absolute;
+            left: 290px;
+            top: -30px;
+          }
+        }
+
+        .trophy {
+          width: 320px;
+          position: relative;
+
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+        }
+
+        .plans {
+          width: 320px;
+          position: relative;
+
+          left: 0;
+          right: 0;
+          bottom: 0;
+          top: 0;
+
+          img {
+            position: absolute;
+            right: -48px;
+            top: -30px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 460px) {
+    .content-our-clients {
+      .content-stats {
+        .hand {
+          width: 260px;
+        }
+
+        .notes {
+          width: 260px;
+
+          img {
+            left: 230px;
+            top: -30px;
+          }
+        }
+
+        .trophy {
+          width: 260px;
+        }
+
+        .plans {
+          width: 260px;
+        }
+      }
+    }
+  }
+`
+
+const Contact = styled.div`
+  display: flex;
+  align-items: center;
+
   width: 100%;
   height: 100%;
 
@@ -339,7 +682,9 @@ const OurServices = styled.div`
 export default {
   Differentials,
   OurServices,
+  OurClients,
   Container,
+  Contact,
   AboutUs,
   Header,
   Hero,
