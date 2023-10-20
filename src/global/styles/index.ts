@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import ContactBanner from '../../assets/bannerContact.png'
 import HeroImg from '../../assets/hero.jpg'
 import LogoBanner from '../../assets/logoBaner.png'
 
@@ -674,9 +675,215 @@ const Contact = styled.div`
   align-items: center;
 
   width: 100%;
-  height: 100%;
+  height: 390px;
 
   margin-top: 50px;
+
+  background-image: url(${ContactBanner});
+
+  .content-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    margin: 0 160px;
+
+    button {
+      display: inline-flex;
+      padding: 16px 20px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      border-radius: 2px;
+      border: 2px solid ${({ theme }) => theme.colors.white};
+
+      color: ${({ theme }) => theme.colors.white};
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+
+    .info-contact {
+      h2 {
+        margin-bottom: 30px;
+
+        color: ${({ theme }) => theme.colors.white};
+        font-size: 2.25rem;
+        font-weight: 700;
+      }
+
+      a {
+        color: ${({ theme }) => theme.colors.white};
+        font-size: 1.5rem;
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  @media (max-width: 1240px) {
+    .content-contact {
+      align-items: flex-start;
+      flex-direction: column;
+
+      margin: 0 60px;
+
+      button {
+        margin-top: 30px;
+      }
+    }
+`
+
+const Footer = styled.footer`
+  width: 100%;
+  height: 100%;
+
+  .content-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 100%;
+    margin: 4rem 10rem;
+
+    .contact-newsletter-and-social {
+      a {
+        margin-right: 12px;
+      }
+
+      h3 {
+        color: ${({ theme }) => theme.colors.secondary};
+        font-size: 1.25rem;
+        font-weight: 500;
+        font-variant: all-small-caps;
+
+        margin-bottom: 19px;
+      }
+
+      strong {
+        color: ${({ theme }) => theme.colors.secondary};
+        font-size: 1.25rem;
+        font-weight: 500;
+        font-variant: all-small-caps;
+      }
+
+      .input-container {
+        display: flex;
+        margin-top: 18px;
+        margin-bottom: 42px;
+
+        input {
+          display: flex;
+          width: 280px;
+          padding: 10px 8px;
+          align-items: center;
+          gap: 10px;
+
+          color: #a3aac2;
+          font-size: 1.125rem;
+
+          border-radius: 4px;
+          border: 1px solid #e0e3eb;
+          background: #fff;
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          width: 136px;
+          height: 41px;
+          padding: 16px 20px;
+          gap: 10px;
+
+          border-radius: 4px;
+          background: ${({ theme }) => theme.colors.primary};
+
+          color: ${({ theme }) => theme.colors.white};
+          text-align: center;
+          font-size: 1.125rem;
+          font-weight: 600;
+
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .contact-info {
+      .logo {
+        display: flex;
+
+        h2 {
+          color: ${({ theme }) => theme.colors.gray_500};
+          font-size: 1.372rem;
+          font-weight: 700;
+        }
+      }
+
+      .contact-info-item {
+        display: flex;
+
+        &:first-child {
+          width: 70%;
+        }
+
+        strong {
+          color: ${({ theme }) => theme.colors.secondary};
+          font-size: 1.25rem;
+          font-weight: 500;
+          font-variant: all-small-caps;
+          margin-right: 12px;
+        }
+
+        p {
+          color: ${({ theme }) => theme.colors.gray_800};
+          font-size: 1.25rem;
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 70px;
+
+    padding-left: 5%;
+
+    background: ${({ theme }) => theme.colors.secondary};
+
+    p {
+      color: ${({ theme }) => theme.colors.white};
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 1140px) {
+    .content-footer {
+      flex-direction: column;
+
+      .contact-newsletter-and-social {
+        margin-top: 32px;
+      }
+    }
+  }
+
+  @media (max-width: 1140px) {
+    .content-footer {
+      .contact-newsletter-and-social {
+        .input-container {
+          input {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
 `
 
 export default {
@@ -687,5 +894,6 @@ export default {
   Contact,
   AboutUs,
   Header,
+  Footer,
   Hero,
 }

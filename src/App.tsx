@@ -18,6 +18,9 @@ import HandIcon from './assets/hand.png'
 import NotesIcon from './assets/notes.png'
 import TrophyIcon from './assets/trophy.png'
 import PlansIcon from './assets/plans.png'
+import InstaIcon from './assets/instagram.svg'
+import LinkedinIcon from './assets/linkedin.svg'
+import WhatsappIcon from './assets/whatsapp.svg'
 
 import Styles from './global/styles'
 
@@ -239,7 +242,87 @@ export function App() {
             </div>
           </div>
         </Styles.OurClients>
-        <Styles.Contact></Styles.Contact>
+        <Styles.Contact>
+          <div className="content-contact">
+            <div className="info-contact">
+              <h2>Consultoria de projetos com qualidade</h2>
+
+              <a
+                href="https://wa.me/5511919368011"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Contato: +11 91936-8011
+              </a>
+            </div>
+
+            <button>Entre em contato</button>
+          </div>
+        </Styles.Contact>
+        <Styles.Footer>
+          <div className="content-footer">
+            <div className="contact-info">
+              <div className="contact-info-item">
+                <strong>Endereço:</strong>
+                <p>
+                  Alameda Rio Negro, n° 1030 – Escritório 2304 Alphaville,
+                  Barueri - CEP 06454-000
+                </p>
+              </div>
+
+              <div className="contact-info-item">
+                <strong>telefone:</strong>
+                <p>(11) 91936-8011</p>
+              </div>
+
+              <div className="contact-info-item">
+                <strong>Email:</strong>
+                <p>bcconstruction.lda@gmail.com</p>
+              </div>
+
+              <div className="logo">
+                <img src={Logo} alt="Logo da BC construction" />
+
+                <h2>BC Construction</h2>
+              </div>
+            </div>
+
+            <div className="contact-newsletter-and-social">
+              <strong>Newsletter:</strong>
+              <div className="input-container">
+                <input type="email" placeholder="Email" />
+
+                <button>Subscrição</button>
+              </div>
+
+              <h3>Social:</h3>
+
+              <a>
+                <img
+                  src={InstaIcon}
+                  alt="Botão para levar para o instagram da bc construction"
+                />
+              </a>
+
+              <a>
+                <img
+                  src={LinkedinIcon}
+                  alt="Botão para levar para o linkedin da bc construction"
+                />
+              </a>
+
+              <a>
+                <img
+                  src={WhatsappIcon}
+                  alt="Botão para levar para o whatsapp da bc construction"
+                />
+              </a>
+            </div>
+          </div>
+          <div className="footer">
+            <p>BC Construction © 2023. All Rights Reserved</p>
+          </div>
+        </Styles.Footer>
       </Styles.Container>
       <GlobalStyle />
     </ThemeProvider>
