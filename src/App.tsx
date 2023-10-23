@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { Sling as Hamburger } from 'hamburger-react'
+import Pagination from '@mui/material/Pagination'
+import Stack from '@mui/material/Stack'
 import { GlobalStyle } from './global/styles/global'
 import theme from './global/styles/theme'
 
@@ -21,11 +23,18 @@ import PlansIcon from './assets/plans.png'
 import InstaIcon from './assets/instagram.svg'
 import LinkedinIcon from './assets/linkedin.svg'
 import WhatsappIcon from './assets/whatsapp.svg'
+import Project1 from './assets/project-image-1.png'
+import Project2 from './assets/project-image-2.png'
+import Project3 from './assets/project-image-3.png'
+import Project4 from './assets/project-image-4.png'
 
 import Styles from './global/styles'
 
 export function App() {
   const [showMenu, setShowMenu] = useState(false)
+  const [carroseltype, setCarroseltype] = useState('Todos')
+
+  function handlePaginationChange(event, value) {}
 
   return (
     <ThemeProvider theme={theme}>
@@ -49,7 +58,7 @@ export function App() {
                 <a href="#about-us">Nossos Serviços</a>
               </li>
               <li>
-                <a href="">Portfólio</a>
+                <a href="#portfolio">Portfólio</a>
               </li>
               <li>
                 <a href="#contact">Contato</a>
@@ -83,7 +92,9 @@ export function App() {
                   </a>
                 </li>
                 <li>
-                  <a href="">Portfólio</a>
+                  <a href="#portfolio" onClick={() => setShowMenu(false)}>
+                    Portfólio
+                  </a>
                 </li>
                 <li>
                   <a href="#contact" onClick={() => setShowMenu(false)}>
@@ -267,6 +278,87 @@ export function App() {
             <button>Entre em contato</button>
           </div>
         </Styles.Contact>
+        <Styles.Portfolio id="portfolio">
+          <div className="content-portfolio">
+            <div className="nav-links">
+              <h2>Portfólio</h2>
+
+              <ul>
+                <li
+                  className={carroseltype === 'Todos' ? 'active' : ''}
+                  onClick={() => setCarroseltype('Todos')}
+                >
+                  Todos
+                </li>
+                <li
+                  className={carroseltype === 'Comercial' ? 'active' : ''}
+                  onClick={() => setCarroseltype('Comercial')}
+                >
+                  Comercial
+                </li>
+                <li
+                  className={carroseltype === 'Residencial' ? 'active' : ''}
+                  onClick={() => setCarroseltype('Residencial')}
+                >
+                  Residencial
+                </li>
+                <li
+                  className={carroseltype === 'Outros' ? 'active' : ''}
+                  onClick={() => setCarroseltype('Outros')}
+                >
+                  Outros
+                </li>
+              </ul>
+            </div>
+            <div className="container-projects">
+              <div className="content-projects">
+                <div className="project-item">
+                  <img src={Project1} alt="" />
+
+                  <div className="project-item-footer">
+                    <strong>Nome da obra</strong>
+                    <p>Endereço</p>
+                  </div>
+                </div>
+
+                <div className="project-item">
+                  <img src={Project2} alt="" />
+
+                  <div className="project-item-footer">
+                    <strong>Nome da obra</strong>
+                    <p>Endereço</p>
+                  </div>
+                </div>
+
+                <div className="project-item">
+                  <img src={Project3} alt="" />
+
+                  <div className="project-item-footer">
+                    <strong>Nome da obra</strong>
+                    <p>Endereço</p>
+                  </div>
+                </div>
+
+                <div className="project-item">
+                  <img src={Project4} alt="" />
+
+                  <div className="project-item-footer">
+                    <strong>Nome da obra</strong>
+                    <p>Endereço</p>
+                  </div>
+                </div>
+              </div>
+              <Stack marginY={4}>
+                <Pagination
+                  count={4}
+                  size="large"
+                  color="standard"
+                  onChange={handlePaginationChange}
+                />
+              </Stack>
+            </div>
+          </div>
+        </Styles.Portfolio>
         <Styles.ContactForm>
           <div className="content-contact-form">
             <h2>Entre em contato, orçe ja!</h2>

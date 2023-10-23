@@ -744,6 +744,132 @@ const Contact = styled.div`
     }
 `
 
+const Portfolio = styled.div`
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  .container-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-portfolio {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+
+    margin-top: 80px;
+
+    h2 {
+      margin-bottom: 30px;
+
+      color: ${({ theme }) => theme.colors.gray_800};
+      font-size: 2.25rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      ul {
+        .active {
+          color: ${({ theme }) => theme.colors.secondary};
+          padding: 12px 0;
+
+          font-weight: 700;
+
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 28px;
+            background-color: ${({ theme }) => theme.colors.secondary};
+            margin-right: 10px;
+            vertical-align: middle;
+          }
+        }
+
+        li {
+          width: 165px;
+          cursor: pointer;
+          padding: 12px 16px;
+          color: #c2c7d6;
+          font-size: 1.5rem;
+          font-weight: 500;
+        }
+      }
+    }
+    .content-projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+
+      margin-top: 80px;
+
+      .project-item {
+        display: flex;
+        width: 360px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        border-radius: 2px;
+
+        img {
+          width: 100%;
+        }
+
+        .project-item-footer {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          align-self: stretch;
+          flex-direction: column;
+
+          padding: 12px 12px 16px 12px;
+          gap: 12px;
+
+          background: ${({ theme }) => theme.colors.secondary};
+
+          strong {
+            color: ${({ theme }) => theme.colors.white};
+            font-size: 1.25rem;
+            font-weight: 700;
+          }
+
+          p {
+            color: ${({ theme }) => theme.colors.white};
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1140px) {
+    .content-portfolio {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 840px) {
+    .content-portfolio {
+      .content-projects {
+        grid-template-columns: repeat(1, 1fr);
+
+        .project-item {
+          width: 300px;
+        }
+      }
+    }
+  }
+`
+
 const ContactForm = styled.div`
   display: flex;
   flex-direction: column;
@@ -1011,6 +1137,7 @@ export default {
   ContactForm,
   OurClients,
   Container,
+  Portfolio,
   Contact,
   AboutUs,
   Header,
