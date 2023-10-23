@@ -34,7 +34,7 @@ export function App() {
   const [showMenu, setShowMenu] = useState(false)
   const [carroseltype, setCarroseltype] = useState('Todos')
 
-  function handlePaginationChange(event, value) {}
+  // function handlePaginationChange(event, value) {}
 
   return (
     <ThemeProvider theme={theme}>
@@ -349,12 +349,7 @@ export function App() {
                 </div>
               </div>
               <Stack marginY={4}>
-                <Pagination
-                  count={4}
-                  size="large"
-                  color="standard"
-                  onChange={handlePaginationChange}
-                />
+                <Pagination count={4} size="large" color="standard" />
               </Stack>
             </div>
           </div>
