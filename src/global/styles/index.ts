@@ -146,7 +146,7 @@ const Hero = styled.section`
     width: 100%;
     height: 100%;
     background-image: url(${HeroImg});
-    background-size: contain;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 
