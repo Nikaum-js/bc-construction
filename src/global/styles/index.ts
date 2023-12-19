@@ -254,11 +254,11 @@ const AboutUs = styled.div`
   background-color: #e3ded9;
 
   h1 {
-    margin: 86px 0 30px 0;
+    margin: 5.375rem 0 1.875rem 0;
 
     color: #263640;
     text-align: center;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 600;
     line-height: 64px;
   }
@@ -268,7 +268,7 @@ const AboutUs = styled.div`
 
     color: #593c25;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 28px;
   }
@@ -293,7 +293,7 @@ const AboutUs = styled.div`
 
       p {
         color: #573a32;
-        font-size: 18px;
+        font-size: 1.125rem;
         font-weight: 700;
         letter-spacing: 4.5px;
       }
@@ -333,12 +333,12 @@ const Portfolio = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin: 86px 0 30px 0;
+  margin: 5.375rem 0 1.875rem 0;
 
   h2 {
     color: #263640;
     text-align: center;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 600;
     line-height: 64px;
     margin-bottom: 60px;
@@ -362,13 +362,13 @@ const Portfolio = styled.div`
         margin: 18px 0;
 
         color: #263640;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: 600;
       }
 
       p {
         color: #593c25;
-        font-size: 16px;
+        font-size: 1rem;
         font-weight: 400;
         line-height: 28px;
       }
@@ -399,14 +399,14 @@ const Budget = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 86px 0 30px 0;
+  margin: 5.375rem 0 1.875rem 0;
 
   width: 100%;
 
   h2 {
     color: #263640;
     text-align: center;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 600;
     line-height: 64px;
 
@@ -416,7 +416,7 @@ const Budget = styled.div`
   p {
     color: #263640;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 26px;
 
@@ -474,7 +474,7 @@ const Budget = styled.div`
     button {
       width: 198px;
       height: 59px;
-      font-size: 16px;
+      font-size: 1rem;
     }
   }
 `
