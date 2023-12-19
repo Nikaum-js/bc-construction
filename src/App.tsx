@@ -1,40 +1,25 @@
+import { Sling as Hamburger } from 'hamburger-react'
 import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { Sling as Hamburger } from 'hamburger-react'
-import Pagination from '@mui/material/Pagination'
-import Stack from '@mui/material/Stack'
+
+import Economic from './assets/economic.svg'
+import Efficiency from './assets/efficiency.svg'
+import InstaIcon from './assets/instagram.svg'
+import LinkedinIcon from './assets/linkedin.svg'
+import Logo from './assets/logo.svg'
+import Project1 from './assets/project-1.png'
+import Project2 from './assets/project-2.jpg'
+import Project3 from './assets/project-3.jpg'
+import Quality from './assets/quality.png'
+import Speed from './assets/speed.svg'
+import WhatsappIcon from './assets/whatsapp.svg'
+import Styles from './global/styles'
 import { GlobalStyle } from './global/styles/global'
 import theme from './global/styles/theme'
 
-import Logo from './assets/logo.svg'
-import VerifyIcon from './assets/verify.svg'
-import SecurityIcon from './assets/security.svg'
-import EfficiencyIcon from './assets/efficiency.svg'
-import MasonryIcon from './assets/masonry.svg'
-import DrywallIcon from './assets/drywall.svg'
-import ReformIcon from './assets/reform.svg'
-import ConstructionsIcon from './assets/constructions.svg'
-import ProjectIcon from './assets/project.svg'
-import ElectricIcon from './assets/electric.svg'
-import HandIcon from './assets/hand.png'
-import NotesIcon from './assets/notes.png'
-import TrophyIcon from './assets/trophy.png'
-import PlansIcon from './assets/plans.png'
-import InstaIcon from './assets/instagram.svg'
-import LinkedinIcon from './assets/linkedin.svg'
-import WhatsappIcon from './assets/whatsapp.svg'
-import Project1 from './assets/project-image-1.png'
-import Project2 from './assets/project-image-2.png'
-import Project3 from './assets/project-image-3.png'
-import Project4 from './assets/project-image-4.png'
-
-import Styles from './global/styles'
-
 export function App() {
   const [showMenu, setShowMenu] = useState(false)
-  const [carroseltype, setCarroseltype] = useState('Todos')
-
-  // function handlePaginationChange(event, value) {}
+  const hideBackground = window.innerWidth < 1420
 
   return (
     <ThemeProvider theme={theme}>
@@ -42,8 +27,6 @@ export function App() {
         <Styles.Header showMenu={showMenu}>
           <div className="logo">
             <img src={Logo} alt="Logo da BC construction" />
-
-            <h2>BC Construction</h2>
           </div>
 
           <nav>
@@ -68,6 +51,7 @@ export function App() {
 
           <Hamburger
             rounded
+            color="#fff"
             toggled={showMenu}
             toggle={setShowMenu}
             duration={0.8}
@@ -106,161 +90,139 @@ export function App() {
           )}
         </Styles.Header>
         <Styles.Hero id="home">
-          <div className="HeroImg">
-            <h1>Seu sonho, nossa missão</h1>
-
-            <div />
-          </div>
-        </Styles.Hero>
-        <Styles.Differentials id="differentials">
-          <h2>Nossos diferenciais</h2>
-
-          <div className="content-card">
-            <div className="card">
-              <img src={VerifyIcon} alt="" />
-
-              <strong>Qualidade</strong>
-
-              <p>Lorem ipsum</p>
-            </div>
-
-            <div className="card">
-              <img src={SecurityIcon} alt="" />
-
-              <strong>Segurança</strong>
-
-              <p>Lorem ipsum</p>
-            </div>
-
-            <div className="card">
-              <img src={EfficiencyIcon} alt="" />
-
-              <strong>Eficiência</strong>
-
-              <p>Lorem ipsum</p>
-            </div>
-          </div>
-        </Styles.Differentials>
-        <Styles.AboutUs id="about-us">
-          <div className="content-card">
-            <div className="white-card">
-              <div className="banner-logo"></div>
-            </div>
-            <div className="brown-card">
-              <div className="about-us-content">
-                <h2>Sobre Nós</h2>
+          {hideBackground ? (
+            <div className="background">
+              <div className="HeroImg">
+                <h1>Construção & Reforma</h1>
 
                 <p>
-                  Prezamos por essa proximidade, o cliente acaba se tornando um
-                  amigo, pois a relação de confiança precisa existir para
-                  tornarmos juntos seu sonho uma realidade seja ele para sua
-                  casa, escritório ou negócio!!!
+                  Bem-vindos à BC Construction. Sua escolha para construções e
+                  reformas. Entregamos soluções de qualidade, de forma eficiente
+                  e pontualmente.
                 </p>
-              </div>
 
-              <button>Saiba mais</button>
+                <button>iniciar Orçamento</button>
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className="title-and-subtitle">
+                <div className="HeroImg">
+                  <h1>Construção & Reforma</h1>
+
+                  <p>
+                    Bem-vindos à BC Construction. Sua escolha para construções e
+                    reformas. Entregamos soluções de qualidade, de forma
+                    eficiente e pontualmente.
+                  </p>
+
+                  <button>
+                    <a
+                      href="https://forms.gle/QC1DPm73Xc9cFo5QA"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      iniciar Orçamento
+                    </a>
+                  </button>
+                </div>
+              </div>
+              <div className="image-background"></div>
+            </>
+          )}
+        </Styles.Hero>
+        <Styles.AboutUs id="about-us">
+          <h1>Sobre nós</h1>
+
+          <p>
+            Somos uma empresa de engenharia, especializada em execução de
+            construções e reformas. Trabalhamos nos segmentos residencial e
+            comercial, executando projetos arquitetônicos e elaborando projetos
+            com qualidade, segurança e pontualidade atendendo as necessidades
+            dos nossos clientes.
+          </p>
+
+          <div className="container-cards">
+            <div className="card-about-us">
+              <img src={Efficiency} alt="" />
+
+              <p>Eficiência</p>
+            </div>
+            <div className="card-about-us">
+              <img src={Speed} alt="" />
+
+              <p>Rapidez</p>
+            </div>
+            <div className="card-about-us">
+              <img src={Economic} alt="" />
+
+              <p>Economia</p>
+            </div>
+            <div className="card-about-us">
+              <img src={Quality} alt="" />
+
+              <p>Qualidade</p>
             </div>
           </div>
         </Styles.AboutUs>
-        <Styles.OurServices id="our-services">
-          <h2>Nossos Serviços</h2>
+        <Styles.Portfolio id="portfolio">
+          <h2>Portfólio</h2>
 
-          <div className="content-card card-white">
-            <div className="card">
-              <img src={MasonryIcon} alt="" />
-              <div className="line"></div>
+          <div className="container-card-portfolio">
+            <div className="card-portfolio">
+              <img src={Project1} alt="" />
 
-              <strong>Alvenaria</strong>
-            </div>
-
-            <div className="card card-brown">
-              <img src={DrywallIcon} alt="" />
-              <div className="line"></div>
-
-              <strong>Steel frame & Drywall</strong>
-            </div>
-
-            <div className="card card-white">
-              <img src={ReformIcon} alt="" />
-              <div className="line"></div>
-
-              <strong>Construções & Reforma</strong>
-            </div>
-
-            <div className="card card-brown">
-              <img src={ConstructionsIcon} alt="" />
-              <div className="line"></div>
-
-              <strong>Gestão de obras</strong>
-            </div>
-
-            <div className="card card-white">
-              <img src={ProjectIcon} alt="" />
-              <div className="line"></div>
-
-              <strong>Projetos</strong>
-            </div>
-
-            <div className="card card-brown">
-              <img src={ElectricIcon} alt="" />
-              <div className="line"></div>
-
-              <strong>Instalações eletricas</strong>
-            </div>
-          </div>
-        </Styles.OurServices>
-        <Styles.OurClients>
-          <div className="content-our-clients">
-            <div className="content-stats">
-              <div className="card-stats hand">
-                <strong>##</strong>
-                <img src={HandIcon} alt="" />
-                <div className="footer-card-stats">
-                  <div className="line-orange" />
-                  <p>Clientes</p>
-                </div>
-              </div>
-
-              <div className="card-stats notes">
-                <strong>##</strong>
-                <img src={NotesIcon} alt="" />
-                <div className="footer-card-stats">
-                  <div className="line-orange" />
-                  <p>Projetos</p>
-                </div>
-              </div>
-
-              <div className="card-stats trophy">
-                <strong>##</strong>
-                <img src={TrophyIcon} alt="" />
-                <div className="footer-card-stats">
-                  <div className="line-orange" />
-                  <p>Metros quadrados</p>
-                </div>
-              </div>
-
-              <div className="card-stats plans">
-                <strong>##</strong>
-                <img src={PlansIcon} alt="" />
-                <div className="footer-card-stats">
-                  <div className="line-orange" />
-                  <p>Cidades</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="know-more">
-              <h2>Nossos Clientes</h2>
+              <h3>MC Donalds’- Reforma Refeitoório</h3>
 
               <p>
-                Lorem ipsum dolor sit amet. A voluptate facere qui voluptatem
-                aperiam in quia itaque est assumenda enim ut pariatur ratione.
+                Reforma elaborada na cozinha do refeitorio da Universidade do Mc
+                Donalds
               </p>
+            </div>
 
-              <button>Saiba mais</button>
+            <div className="card-portfolio">
+              <img src={Project2} alt="" />
+
+              <h3>MC Donalds’ - Reforma Horta Comunitária</h3>
+
+              <p>
+                Reforma da horta comunitária localizada dentro do Mc
+                Donalds’University em Alphaville
+              </p>
+            </div>
+
+            <div className="card-portfolio">
+              <img src={Project3} alt="" />
+
+              <h3>FAAMA - Monumento de praças</h3>
+
+              <p>
+                Contrução do monumento de praças projetado na Faculdade
+                Adventista da Amazônia
+              </p>
             </div>
           </div>
-        </Styles.OurClients>
+        </Styles.Portfolio>
+        <Styles.Budget id="our-services">
+          <h2>Cuidamos de Tudo para voce</h2>
+
+          <p>
+            Nos comprometmos em executar de forma eficiente o seu projeto, com
+            qualidade e pontualidade
+          </p>
+
+          <div className="banner-budget">
+            <button>
+              <a
+                href="https://forms.gle/QC1DPm73Xc9cFo5QA"
+                target="_blank"
+                rel="noreferrer"
+              >
+                iniciar Orçamento
+              </a>
+            </button>
+          </div>
+        </Styles.Budget>
         <Styles.Contact id="contact">
           <div className="content-contact">
             <div className="info-contact">
@@ -278,82 +240,6 @@ export function App() {
             <button>Entre em contato</button>
           </div>
         </Styles.Contact>
-        <Styles.Portfolio id="portfolio">
-          <div className="content-portfolio">
-            <div className="nav-links">
-              <h2>Portfólio</h2>
-
-              <ul>
-                <li
-                  className={carroseltype === 'Todos' ? 'active' : ''}
-                  onClick={() => setCarroseltype('Todos')}
-                >
-                  Todos
-                </li>
-                <li
-                  className={carroseltype === 'Comercial' ? 'active' : ''}
-                  onClick={() => setCarroseltype('Comercial')}
-                >
-                  Comercial
-                </li>
-                <li
-                  className={carroseltype === 'Residencial' ? 'active' : ''}
-                  onClick={() => setCarroseltype('Residencial')}
-                >
-                  Residencial
-                </li>
-                <li
-                  className={carroseltype === 'Outros' ? 'active' : ''}
-                  onClick={() => setCarroseltype('Outros')}
-                >
-                  Outros
-                </li>
-              </ul>
-            </div>
-            <div className="container-projects">
-              <div className="content-projects">
-                <div className="project-item">
-                  <img src={Project1} alt="" />
-
-                  <div className="project-item-footer">
-                    <strong>Nome da obra</strong>
-                    <p>Endereço</p>
-                  </div>
-                </div>
-
-                <div className="project-item">
-                  <img src={Project2} alt="" />
-
-                  <div className="project-item-footer">
-                    <strong>Nome da obra</strong>
-                    <p>Endereço</p>
-                  </div>
-                </div>
-
-                <div className="project-item">
-                  <img src={Project3} alt="" />
-
-                  <div className="project-item-footer">
-                    <strong>Nome da obra</strong>
-                    <p>Endereço</p>
-                  </div>
-                </div>
-
-                <div className="project-item">
-                  <img src={Project4} alt="" />
-
-                  <div className="project-item-footer">
-                    <strong>Nome da obra</strong>
-                    <p>Endereço</p>
-                  </div>
-                </div>
-              </div>
-              <Stack marginY={4}>
-                <Pagination count={4} size="large" color="standard" />
-              </Stack>
-            </div>
-          </div>
-        </Styles.Portfolio>
         <Styles.ContactForm>
           <div className="content-contact-form">
             <h2>Entre em contato, orçe ja!</h2>
