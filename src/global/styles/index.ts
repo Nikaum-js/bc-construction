@@ -12,9 +12,28 @@ interface HamburgerMenuHeaderProps {
 const Container = styled.main`
   display: flex;
   align-items: center;
+  position: relative;
 
-  justify-content: center;
   flex-direction: column;
+
+  #whatsapp {
+    position: fixed;
+
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    #whatsapp {
+      bottom: 0.8rem;
+      right: 0.8rem;
+
+      img {
+        width: 79.5px;
+        height: 75px;
+      }
+    }
+  }
 `
 
 const Header = styled.header<HamburgerMenuHeaderProps>`
@@ -446,11 +465,7 @@ const Budget = styled.div`
     text-align: center;
     font-size: 20px;
     font-weight: 500;
-
-    a {
-      text-decoration: none;
-      color: #fff;
-    }
+    color: #fff;
   }
 
   @media (max-width: 740px) {
@@ -588,13 +603,10 @@ const GoTalk = styled.div`
         background: #573a32;
 
         text-align: center;
+        color: #fff;
+
         font-size: 20px;
         font-weight: 500;
-
-        a {
-          text-decoration: none;
-          color: #fff;
-        }
       }
     }
   }
@@ -625,6 +637,8 @@ const GoTalk = styled.div`
       width: 90%;
       height: 150px;
 
+      margin: 0;
+
       div {
         h2 {
           font-size: 1.6rem;
@@ -635,6 +649,40 @@ const GoTalk = styled.div`
           width: 160.38px;
           height: 47.79px;
           font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .banner-talk {
+      height: 100px;
+
+      div {
+        h2 {
+          font-size: 1.2rem;
+          margin-bottom: 0.2rem;
+        }
+
+        button {
+          width: 128.3px;
+          height: 38.232px;
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    .banner-talk {
+      div {
+        h2 {
+          font-size: 1rem;
+        }
+
+        button {
+          width: 115.47px;
+          height: 34.41px;
         }
       }
     }
@@ -655,11 +703,9 @@ const Footer = styled.footer`
     align-items: center;
 
     height: 100%;
-    margin: 4rem 10rem;
+    margin: 4rem 8rem;
 
     .contact-newsletter-and-social {
-      display: flex;
-
       a {
         & + a {
           margin-left: 1.25rem;
@@ -677,6 +723,8 @@ const Footer = styled.footer`
     }
 
     .contact-info {
+      width: 50%;
+
       h3 {
         color: #e0e3eb;
         font-size: 1.25rem;
@@ -692,13 +740,10 @@ const Footer = styled.footer`
 
         margin-bottom: 12px;
 
-        &:first-child {
-          width: 70%;
-        }
-
         p {
           color: #f6f8f7;
           font-size: 1rem;
+          line-height: 1.6;
           font-weight: 400;
           text-transform: capitalize;
         }
@@ -723,24 +768,44 @@ const Footer = styled.footer`
     }
   }
 
-  @media (max-width: 1140px) {
+  @media (max-width: 1120px) {
     .content-footer {
       flex-direction: column;
 
-      .contact-newsletter-and-social {
-        margin-top: 32px;
+      .contact-info {
+        margin: 2rem 0;
       }
     }
   }
 
   @media (max-width: 1140px) {
     .content-footer {
+      margin: 4rem 2rem;
+
       .contact-newsletter-and-social {
         .input-container {
           input {
             width: 200px;
           }
         }
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    .content-footer {
+      margin: 4rem 2rem;
+
+      .contact-info {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .content-footer {
+      .contact-newsletter-and-social {
+        width: 100%;
       }
     }
   }

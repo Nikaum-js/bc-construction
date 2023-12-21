@@ -19,6 +19,7 @@ import Project3 from './assets/project-3.jpg'
 import Quality from './assets/quality.png'
 import Speed from './assets/speed.svg'
 import SteelFrameDrywall from './assets/steelFrameDrywall.svg'
+import Whatsapp from './assets/whatsapp.png'
 import WhatsappIcon from './assets/whatsapp.svg'
 import Styles from './global/styles'
 import { GlobalStyle } from './global/styles/global'
@@ -31,6 +32,15 @@ export function App() {
   return (
     <ThemeProvider theme={theme}>
       <Styles.Container>
+        <button id="whatsapp">
+          <a
+            href="https://wa.me/5511919368011"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img src={Whatsapp} alt="botão para redirecionar para o whatsapp" />
+          </a>
+        </button>
         <Styles.Header showMenu={showMenu}>
           <div className="logo">
             <img src={Logo} alt="Logo da BC construction" />
@@ -107,8 +117,13 @@ export function App() {
                   reformas. Entregamos soluções de qualidade, de forma eficiente
                   e pontualmente.
                 </p>
-
-                <button>iniciar Orçamento</button>
+                <a
+                  href="https://forms.gle/QC1DPm73Xc9cFo5QA"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button>iniciar Orçamento</button>
+                </a>
               </div>
             </div>
           ) : (
@@ -122,16 +137,13 @@ export function App() {
                     reformas. Entregamos soluções de qualidade, de forma
                     eficiente e pontualmente.
                   </p>
-
-                  <button>
-                    <a
-                      href="https://forms.gle/QC1DPm73Xc9cFo5QA"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      iniciar Orçamento
-                    </a>
-                  </button>
+                  <a
+                    href="https://forms.gle/QC1DPm73Xc9cFo5QA"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button>iniciar Orçamento</button>
+                  </a>
                 </div>
               </div>
               <div className="image-background"></div>
@@ -210,7 +222,7 @@ export function App() {
             </div>
           </div>
         </Styles.Portfolio>
-        <Styles.Budget id="our-services">
+        <Styles.Budget>
           <h2>Cuidamos de Tudo para voce</h2>
 
           <p>
@@ -219,15 +231,13 @@ export function App() {
           </p>
 
           <div className="banner-budget">
-            <button>
-              <a
-                href="https://forms.gle/QC1DPm73Xc9cFo5QA"
-                target="_blank"
-                rel="noreferrer"
-              >
-                iniciar Orçamento
-              </a>
-            </button>
+            <a
+              href="https://forms.gle/QC1DPm73Xc9cFo5QA"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button>iniciar Orçamento</button>
+            </a>
           </div>
         </Styles.Budget>
         <Styles.OurServices id="our-services">
@@ -275,19 +285,17 @@ export function App() {
           <div className="banner-talk">
             <div>
               <h2>Vamos conversar</h2>
-              <button>
-                <a
-                  href="https://forms.gle/QC1DPm73Xc9cFo5QA"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  iniciar Orçamento
-                </a>
-              </button>
+              <a
+                href="https://forms.gle/QC1DPm73Xc9cFo5QA"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button>iniciar Orçamento</button>
+              </a>
             </div>
           </div>
         </Styles.GoTalk>
-        <Styles.Footer>
+        <Styles.Footer id="contact">
           <div className="content-footer">
             <div className="logo">
               <img src={LogoWhite} alt="Logo da BC construction" />
