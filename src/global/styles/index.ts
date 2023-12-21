@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
 
+import TalkImg from '../../assets/background-talk.png'
+import FooterBanner from '../../assets/banner-footer.png'
 import BudgetImg from '../../assets/bannerBudget.png'
-import ContactBanner from '../../assets/bannerContact.png'
 import HeroImg from '../../assets/hero.png'
 
 interface HamburgerMenuHeaderProps {
@@ -157,7 +158,7 @@ const Hero = styled.section`
 
       h1 {
         color: ${({ theme }) => theme.colors.gray_800};
-        font-size: 4.5rem;
+        font-size: 4.2rem;
         font-weight: 500;
       }
 
@@ -484,257 +485,156 @@ const OurServices = styled.div`
   flex-direction: column;
   align-items: center;
 
-  background-color: ${({ theme }) => theme.colors.gray_100};
-
   width: 100%;
-  height: 100%;
+
+  background: #e3ded9;
 
   h2 {
-    color: ${({ theme }) => theme.colors.gray_800};
-    margin-top: 60px;
-    font-size: 2.25rem;
+    margin: 3.1875rem 0 6.4375rem 0;
+
+    color: #292e3d;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 64px;
   }
 
-  .content-card {
+  .container-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-row-gap: 6rem;
+    grid-template-columns: 1fr 1fr 1fr;
 
-    margin-top: 50px;
+    margin-bottom: 8.75rem;
 
-    .card-brown {
-      background: ${({ theme }) => theme.colors.secondary};
-
-      strong {
-        color: ${({ theme }) => theme.colors.white};
-        text-align: center;
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
-    }
-
-    .card-white {
-      background: ${({ theme }) => theme.colors.white};
-
-      strong {
-        text-align: center;
-        color: ${({ theme }) => theme.colors.secondary};
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
-    }
-
-    .card {
+    .card-our-service {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
 
-      margin: 48px 62px;
+      p {
+        width: 50%;
+        color: #593c25;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
 
-      width: 271px;
-      padding: 20px;
-      height: 181px;
-      gap: 20px;
-
-      border-radius: 4px;
-      box-shadow: 0px 0px 37px -2px rgba(17, 24, 39, 0.05);
-
-      .line {
-        width: 60px;
-        height: 2px;
-        background: #e0e3eb;
+      img {
+        margin-right: 0.8rem;
       }
     }
   }
 
-  @media (max-width: 1240px) {
-    .content-card {
-      grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 1220px) {
+    .container-cards {
+      width: 90%;
     }
   }
 
-  @media (max-width: 840px) {
-    .content-card {
-      grid-template-columns: repeat(1, 1fr);
+  @media (max-width: 740px) {
+    .container-cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 
-      .card {
-        margin: 16px 62px;
-        width: 240px;
+  @media (max-width: 460px) {
+    .container-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .card-our-service {
+        width: 80%;
       }
     }
   }
 `
 
-const Contact = styled.div`
+const GoTalk = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 5.375rem 0 1.875rem 0;
 
   width: 100%;
-  height: 390px;
 
-  margin-top: 50px;
-
-  background-image: url(${ContactBanner});
-
-  .content-contact {
+  .banner-talk {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
-    width: 100%;
+    width: 90%;
+    height: 400px;
+    background-image: url(${TalkImg});
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 
-    margin: 0 160px;
+    div {
+      margin-right: 30%;
 
-    button {
-      display: inline-flex;
-      padding: 16px 20px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-
-      border-radius: 2px;
-      border: 2px solid ${({ theme }) => theme.colors.white};
-
-      color: ${({ theme }) => theme.colors.white};
-      font-size: 1.125rem;
-      font-weight: 600;
-    }
-
-    .info-contact {
       h2 {
-        margin-bottom: 30px;
-
-        color: ${({ theme }) => theme.colors.white};
-        font-size: 2.25rem;
-        font-weight: 700;
-      }
-
-      a {
-        color: ${({ theme }) => theme.colors.white};
-        font-size: 1.5rem;
-        text-decoration-line: underline;
-      }
-    }
-  }
-
-  @media (max-width: 1240px) {
-    .content-contact {
-      align-items: flex-start;
-      flex-direction: column;
-
-      margin: 0 60px;
-
-      button {
-        margin-top: 30px;
-      }
-    }
-`
-
-const ContactForm = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  background-color: ${({ theme }) => theme.colors.gray_100};
-
-  padding: 48px 0;
-
-  width: 100%;
-  height: 100%;
-
-  .content-contact-form {
-    h2 {
-      color: ${({ theme }) => theme.colors.gray_800};
-      font-size: 2.25rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    p {
-      color: ${({ theme }) => theme.colors.gray_800};
-      text-align: center;
-      font-size: 1.25rem;
-
-      margin-bottom: 62px;
-    }
-
-    form {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-
-      .column-input {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-
-        input {
-          display: flex;
-          width: 280px;
-          padding: 10px 8px;
-          align-items: center;
-          gap: 10px;
-          border-radius: 4px;
-          border: 1px solid #e0e3eb;
-          background: ${({ theme }) => theme.colors.white};
-
-          color: #a3aac2;
-          font-size: 1.125rem;
-        }
-      }
-
-      textarea {
-        display: flex;
-        width: 592px;
-        height: 135px;
-        padding: 10px 8px;
-        align-items: flex-start;
-        gap: 10px;
-        resize: none;
-
-        border-radius: 4px;
-        border: 1px solid #e0e3eb;
-        background: ${({ theme }) => theme.colors.white};
-
-        color: #a3aac2;
-
-        font-size: 1.125rem;
-
-        margin-top: 20px;
-      }
-
-      button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        width: 271px;
-        padding: 16px 20px;
-        gap: 10px;
-
-        background: ${({ theme }) => theme.colors.secondary};
-
-        color: ${({ theme }) => theme.colors.white};
-        text-align: center;
-        font-size: 1.125rem;
+        color: #000;
+        font-size: 3rem;
         font-weight: 600;
 
-        margin-top: 48px;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        width: 246px;
+        height: 74.117px;
+        border-radius: 5px;
+        background: #573a32;
+
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
       }
     }
   }
 
-  @media (max-width: 620px) {
-    .content-contact-form {
-      form {
-        textarea {
-          width: 280px;
+  @media (max-width: 740px) {
+    .banner-talk {
+      width: 90%;
+      height: 200px;
+
+      div {
+        h2 {
+          font-size: 2.2rem;
+
+          margin-bottom: 0.5rem;
         }
 
-        .column-input {
-          grid-template-columns: repeat(1, 1fr);
+        button {
+          width: 198px;
+          height: 59px;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .banner-talk {
+      width: 90%;
+      height: 150px;
+
+      div {
+        h2 {
+          font-size: 1.6rem;
+          margin-bottom: 0.2rem;
+        }
+
+        button {
+          width: 160.38px;
+          height: 47.79px;
+          font-size: 1rem;
         }
       }
     }
@@ -745,6 +645,10 @@ const Footer = styled.footer`
   width: 100%;
   height: 100%;
 
+  background-image: url(${FooterBanner});
+  background-size: cover;
+  background-repeat: no-repeat;
+
   .content-footer {
     display: flex;
     justify-content: space-between;
@@ -754,99 +658,49 @@ const Footer = styled.footer`
     margin: 4rem 10rem;
 
     .contact-newsletter-and-social {
+      display: flex;
+
       a {
-        margin-right: 12px;
+        & + a {
+          margin-left: 1.25rem;
+        }
       }
 
       h3 {
-        color: ${({ theme }) => theme.colors.secondary};
+        color: #fff;
         font-size: 1.25rem;
         font-weight: 500;
         font-variant: all-small-caps;
 
-        margin-bottom: 19px;
-      }
-
-      strong {
-        color: ${({ theme }) => theme.colors.secondary};
-        font-size: 1.25rem;
-        font-weight: 500;
-        font-variant: all-small-caps;
-      }
-
-      .input-container {
-        display: flex;
-        margin-top: 18px;
-        margin-bottom: 42px;
-
-        input {
-          display: flex;
-          width: 280px;
-          padding: 10px 8px;
-          align-items: center;
-          gap: 10px;
-
-          color: #a3aac2;
-          font-size: 1.125rem;
-
-          border-radius: 4px;
-          border: 1px solid #e0e3eb;
-          background: #fff;
-        }
-
-        button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          width: 136px;
-          height: 41px;
-          padding: 16px 20px;
-          gap: 10px;
-
-          border-radius: 4px;
-          background: ${({ theme }) => theme.colors.primary};
-
-          color: ${({ theme }) => theme.colors.white};
-          text-align: center;
-          font-size: 1.125rem;
-          font-weight: 600;
-
-          margin-left: 8px;
-        }
+        margin-bottom: 20px;
       }
     }
 
     .contact-info {
-      .logo {
-        display: flex;
+      h3 {
+        color: #e0e3eb;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 500;
+        font-variant: all-small-caps;
 
-        h2 {
-          color: ${({ theme }) => theme.colors.gray_500};
-          font-size: 1.372rem;
-          font-weight: 700;
-        }
+        margin-bottom: 12px;
       }
 
       .contact-info-item {
         display: flex;
 
+        margin-bottom: 12px;
+
         &:first-child {
           width: 70%;
         }
 
-        strong {
-          color: ${({ theme }) => theme.colors.secondary};
-          font-size: 1.25rem;
-          font-weight: 500;
-          font-variant: all-small-caps;
-          margin-right: 12px;
-        }
-
         p {
-          color: ${({ theme }) => theme.colors.gray_800};
-          font-size: 1.25rem;
-          margin-bottom: 32px;
+          color: #f6f8f7;
+          font-size: 1rem;
+          font-weight: 400;
+          text-transform: capitalize;
         }
       }
     }
@@ -861,7 +715,7 @@ const Footer = styled.footer`
 
     padding-left: 5%;
 
-    background: ${({ theme }) => theme.colors.secondary};
+    background: #363435;
 
     p {
       color: ${({ theme }) => theme.colors.white};
@@ -894,11 +748,10 @@ const Footer = styled.footer`
 
 export default {
   OurServices,
+  GoTalk,
   Budget,
-  ContactForm,
   Container,
   Portfolio,
-  Contact,
   AboutUs,
   Header,
   Footer,

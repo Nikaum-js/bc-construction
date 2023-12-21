@@ -2,16 +2,23 @@ import { Sling as Hamburger } from 'hamburger-react'
 import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
+import Alvenaria from './assets/alvenaria.svg'
+import ConstrucaoEmICF from './assets/construcao-em-ICF.svg'
+import ConstruçãoReformas from './assets/construcao-reformas.svg'
 import Economic from './assets/economic.svg'
 import Efficiency from './assets/efficiency.svg'
+import GestaoDeObras from './assets/gestao-de-obras.svg'
 import InstaIcon from './assets/instagram.svg'
+import InstalacaoManutençãoEletrica from './assets/instalacao-manutencao-eletrica.svg'
 import LinkedinIcon from './assets/linkedin.svg'
+import LogoWhite from './assets/logo-white.svg'
 import Logo from './assets/logo.svg'
 import Project1 from './assets/project-1.png'
 import Project2 from './assets/project-2.jpg'
 import Project3 from './assets/project-3.jpg'
 import Quality from './assets/quality.png'
 import Speed from './assets/speed.svg'
+import SteelFrameDrywall from './assets/steelFrameDrywall.svg'
 import WhatsappIcon from './assets/whatsapp.svg'
 import Styles from './global/styles'
 import { GlobalStyle } from './global/styles/global'
@@ -223,51 +230,73 @@ export function App() {
             </button>
           </div>
         </Styles.Budget>
-        <Styles.Contact id="contact">
-          <div className="content-contact">
-            <div className="info-contact">
-              <h2>Consultoria de projetos com qualidade</h2>
+        <Styles.OurServices id="our-services">
+          <h2>Nossos Serviços</h2>
 
-              <a
-                href="https://wa.me/5511919368011"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Contato: +11 91936-8011
-              </a>
+          <div className="container-cards">
+            <div className="card-our-service">
+              <img src={Alvenaria} alt="" />
+
+              <p>Alvenaria</p>
             </div>
 
-            <button>Entre em contato</button>
+            <div className="card-our-service">
+              <img src={GestaoDeObras} alt="" />
+
+              <p>Gestão de obras</p>
+            </div>
+
+            <div className="card-our-service">
+              <img src={ConstrucaoEmICF} alt="" />
+
+              <p>Construção em ICF</p>
+            </div>
+
+            <div className="card-our-service">
+              <img src={ConstruçãoReformas} alt="" />
+
+              <p>Construção & Reformas</p>
+            </div>
+
+            <div className="card-our-service">
+              <img src={InstalacaoManutençãoEletrica} alt="" />
+
+              <p>Instalação e manutenção elétrica</p>
+            </div>
+
+            <div className="card-our-service">
+              <img src={SteelFrameDrywall} alt="" />
+
+              <p>Steel frame & Drywall</p>
+            </div>
           </div>
-        </Styles.Contact>
-        <Styles.ContactForm>
-          <div className="content-contact-form">
-            <h2>Entre em contato, orçe ja!</h2>
-
-            <p>Entre em contato conosco, nossos time especializado</p>
-
-            <form action="">
-              <div className="column-input">
-                <input type="text" placeholder="Nome *" />
-
-                <input type="text" placeholder="Email *" />
-
-                <input type="text" placeholder="Motivo para contato *" />
-
-                <input type="text" placeholder="Telefone" />
-              </div>
-
-              <textarea placeholder="Mensagem *" />
-
-              <button type="submit">Enviar</button>
-            </form>
+        </Styles.OurServices>
+        <Styles.GoTalk>
+          <div className="banner-talk">
+            <div>
+              <h2>Vamos conversar</h2>
+              <button>
+                <a
+                  href="https://forms.gle/QC1DPm73Xc9cFo5QA"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  iniciar Orçamento
+                </a>
+              </button>
+            </div>
           </div>
-        </Styles.ContactForm>
+        </Styles.GoTalk>
         <Styles.Footer>
           <div className="content-footer">
+            <div className="logo">
+              <img src={LogoWhite} alt="Logo da BC construction" />
+            </div>
+
             <div className="contact-info">
+              <h3>Contato</h3>
+
               <div className="contact-info-item">
-                <strong>Endereço:</strong>
                 <p>
                   Alameda Rio Negro, n° 1030 – Escritório 2304 Alphaville,
                   Barueri - CEP 06454-000
@@ -275,31 +304,16 @@ export function App() {
               </div>
 
               <div className="contact-info-item">
-                <strong>telefone:</strong>
                 <p>(11) 91936-8011</p>
               </div>
 
               <div className="contact-info-item">
-                <strong>Email:</strong>
                 <p>bcconstruction.lda@gmail.com</p>
-              </div>
-
-              <div className="logo">
-                <img src={Logo} alt="Logo da BC construction" />
-
-                <h2>BC Construction</h2>
               </div>
             </div>
 
             <div className="contact-newsletter-and-social">
-              <strong>Newsletter:</strong>
-              <div className="input-container">
-                <input type="email" placeholder="Email" />
-
-                <button>Subscrição</button>
-              </div>
-
-              <h3>Social:</h3>
+              <h3>Fique por dentro:</h3>
 
               <a>
                 <img
@@ -324,7 +338,7 @@ export function App() {
             </div>
           </div>
           <div className="footer">
-            <p>BC Construction © 2023. All Rights Reserved</p>
+            <p>BC Construction © 2023. Todos direitos reservados</p>
           </div>
         </Styles.Footer>
       </Styles.Container>
