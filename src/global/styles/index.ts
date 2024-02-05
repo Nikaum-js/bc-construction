@@ -24,7 +24,7 @@ const Container = styled.main`
     right: 13.5rem;
   }
 
-  @media (max-width: 1220px) {
+  @media (max-width: 1320px) {
     #whatsapp {
       bottom: 0.8rem;
       right: 1.2rem;
@@ -139,7 +139,7 @@ const Header = styled.header<HamburgerMenuHeaderProps>`
     }
   }
 
-  @media (max-width: 1080px) {
+  @media (max-width: 1320px) {
     padding: 0 1rem;
 
     nav {
