@@ -3,13 +3,13 @@ import { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 
 import Alvenaria from './assets/alvenaria.svg'
-import ConstrucaoEmICF from './assets/construcao-em-ICF.svg'
-import ConstruçãoReformas from './assets/construcao-reformas.svg'
+import ContrucaoEReformas from './assets/construcao-e-reformas.svg'
 import Economic from './assets/economic.svg'
 import Efficiency from './assets/efficiency.svg'
-import GestaoDeObras from './assets/gestao-de-obras.svg'
+import Eletrica from './assets/eletrica.svg'
+import GestaoDeObras from './assets/gestao-de-obras.png'
+import ICF from './assets/ICF.svg'
 import InstaIcon from './assets/instagram.svg'
-import InstalacaoManutençãoEletrica from './assets/instalacao-manutencao-eletrica.svg'
 import LinkedinIcon from './assets/linkedin.svg'
 import LogoWhite from './assets/logo-white.svg'
 import Logo from './assets/logo.svg'
@@ -18,7 +18,7 @@ import Project2 from './assets/project-2.jpg'
 import Project3 from './assets/project-3.jpg'
 import Quality from './assets/quality.png'
 import Speed from './assets/speed.svg'
-import SteelFrameDrywall from './assets/steelFrameDrywall.svg'
+import StellFrame from './assets/stellFrame.svg'
 import Whatsapp from './assets/whatsapp.png'
 import WhatsappIcon from './assets/whatsapp.svg'
 import Styles from './global/styles'
@@ -245,39 +245,63 @@ export function App() {
 
           <div className="container-cards">
             <div className="card-our-service">
-              <img src={Alvenaria} alt="" />
+              <div className="header-card-our-service">
+                <img src={Alvenaria} alt="" />
 
-              <p>Alvenaria</p>
+                <h3>Alvenaria</h3>
+              </div>
+
+              <p>Serviço sólido de alvenaria para construções duráveis</p>
             </div>
 
             <div className="card-our-service">
-              <img src={GestaoDeObras} alt="" />
+              <div className="header-card-our-service">
+                <img src={GestaoDeObras} alt="" />
 
-              <p>Gestão de obras</p>
+                <h3>Gestão de Obras</h3>
+              </div>
+
+              <p>Gestão de obras eficiente e qualificada</p>
             </div>
 
             <div className="card-our-service">
-              <img src={ConstrucaoEmICF} alt="" />
+              <div className="header-card-our-service">
+                <img src={ICF} alt="" />
 
-              <p>Construção em ICF</p>
+                <h3>ICF</h3>
+              </div>
+
+              <p>Construção ideal para isolamento térmico</p>
             </div>
 
             <div className="card-our-service">
-              <img src={ConstruçãoReformas} alt="" />
+              <div className="header-card-our-service">
+                <img src={ContrucaoEReformas} alt="" />
 
-              <p>Construção & Reformas</p>
+                <h3>Construção e Reformas</h3>
+              </div>
+
+              <p>Serviço completos de construção e reformas</p>
             </div>
 
             <div className="card-our-service">
-              <img src={InstalacaoManutençãoEletrica} alt="" />
+              <div className="header-card-our-service">
+                <img src={Eletrica} alt="" />
 
-              <p>Instalação e manutenção elétrica</p>
+                <h3>Elétrica</h3>
+              </div>
+
+              <p>Instalação e manutenção elétrica profissional</p>
             </div>
 
             <div className="card-our-service">
-              <img src={SteelFrameDrywall} alt="" />
+              <div className="header-card-our-service">
+                <img src={StellFrame} alt="" />
 
-              <p>Steel frame & Drywall</p>
+                <h3>Steel Frame & Drywall</h3>
+              </div>
+
+              <p>Soluções inovadoras em steel frame e drywall</p>
             </div>
           </div>
         </Styles.OurServices>

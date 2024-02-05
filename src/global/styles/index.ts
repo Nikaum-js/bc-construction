@@ -4,6 +4,7 @@ import TalkImg from '../../assets/background-talk.png'
 import FooterBanner from '../../assets/banner-footer.png'
 import BudgetImg from '../../assets/bannerBudget.png'
 import HeroImg from '../../assets/hero.png'
+import OurServicesBanner from '../../assets/our-services-banner.png'
 
 interface HamburgerMenuHeaderProps {
   showMenu: boolean
@@ -189,16 +190,20 @@ const Hero = styled.section`
         line-height: 28px;
       }
 
-      button {
-        width: 246px;
-        height: 74.117px;
-        border-radius: 5px;
-        background: #573a32;
-
+      a {
         color: #fff;
-        text-align: center;
-        font-size: 20px;
-        font-weight: 500;
+
+        button {
+          width: 246px;
+          height: 74.117px;
+          border-radius: 5px;
+          background: #573a32;
+
+          color: #fff;
+          text-align: center;
+          font-size: 20px;
+          font-weight: 500;
+        }
       }
     }
   }
@@ -243,6 +248,7 @@ const Hero = styled.section`
         height: 74.117px;
         border-radius: 5px;
         background: #573a32;
+        color: #fff;
 
         text-align: center;
         font-size: 20px;
@@ -501,13 +507,16 @@ const OurServices = styled.div`
   align-items: center;
 
   width: 100%;
+  height: 100%;
 
-  background: #e3ded9;
+  background-image: url(${OurServicesBanner});
+  background-size: cover;
+  background-repeat: no-repeat;
 
   h2 {
     margin: 3.1875rem 0 6.4375rem 0;
 
-    color: #292e3d;
+    color: #ffffff;
     text-align: center;
     font-size: 3rem;
     font-weight: 600;
@@ -516,7 +525,7 @@ const OurServices = styled.div`
 
   .container-cards {
     display: grid;
-    grid-row-gap: 6rem;
+    gap: 6rem;
     grid-template-columns: 1fr 1fr 1fr;
 
     margin-bottom: 8.75rem;
@@ -524,16 +533,45 @@ const OurServices = styled.div`
     .card-our-service {
       display: flex;
       align-items: center;
+      justify-content: center;
+      flex-direction: column;
 
-      p {
-        width: 50%;
-        color: #593c25;
-        font-size: 1.25rem;
-        font-weight: 600;
+      padding: 39px 32px 32px 26px;
+
+      background: rgba(81, 37, 13, 0.75);
+      border-radius: 8px;
+
+      .header-card-our-service {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+          width: 41px;
+          height: 41px;
+
+          margin-bottom: 15px;
+        }
       }
 
-      img {
-        margin-right: 0.8rem;
+      h3 {
+        color: #f3faff;
+        font-size: 1.25rem;
+        font-weight: 600;
+
+        width: 150px;
+        text-align: center;
+
+        margin-bottom: 8px;
+      }
+
+      p {
+        width: 150px;
+        color: #f3faff;
+        font-weight: 300;
+        text-align: center;
+
+        font-size: 0.75rem;
       }
     }
   }
@@ -544,9 +582,10 @@ const OurServices = styled.div`
     }
   }
 
-  @media (max-width: 740px) {
+  @media (max-width: 860px) {
     .container-cards {
       grid-template-columns: 1fr 1fr;
+      gap: 3rem;
     }
   }
 
