@@ -260,6 +260,13 @@ const Hero = styled.section`
     }
   }
 
+  @media (max-width: 1320px) {
+    .background {
+      justify-content: flex-start;
+      padding-left: 2rem;
+    }
+  }
+
   @media (max-width: 640px) {
     .background {
       .HeroImg {
