@@ -27,7 +27,7 @@ const Container = styled.main`
   @media (max-width: 1220px) {
     #whatsapp {
       bottom: 0.8rem;
-      right: 0.8rem;
+      right: 1.2rem;
 
       img {
         width: 79.5px;
