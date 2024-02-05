@@ -74,7 +74,7 @@ const Header = styled.header<HamburgerMenuHeaderProps>`
     width: 100vw;
     height: 100vh;
 
-    background-color: ${({ theme }) => theme.colors.white};
+    background-color: #573a32;
 
     z-index: 10;
 
@@ -96,7 +96,7 @@ const Header = styled.header<HamburgerMenuHeaderProps>`
         a {
           font-size: 1.615rem;
           font-weight: medium;
-          color: ${({ theme }) => theme.colors.gray_900};
+          color: ${({ theme }) => theme.colors.white};
         }
       }
     }
