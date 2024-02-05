@@ -21,10 +21,10 @@ const Container = styled.main`
     position: fixed;
 
     bottom: 1.5rem;
-    right: 1.5rem;
+    right: 13.5rem;
   }
 
-  @media (max-width: 480px) {
+  @media (max-width: 1220px) {
     #whatsapp {
       bottom: 0.8rem;
       right: 0.8rem;
@@ -43,10 +43,8 @@ const Header = styled.header<HamburgerMenuHeaderProps>`
   align-items: center;
 
   width: 100%;
-  height: 5rem;
-  padding: 0 2rem;
-
-  margin: 0 48px;
+  height: 80px;
+  padding: 0 10rem;
 
   background-color: #363435;
 
@@ -174,12 +172,12 @@ const Hero = styled.section`
     .HeroImg {
       display: flex;
       flex-direction: column;
-      width: 50%;
+      width: 60%;
 
       h1 {
         color: ${({ theme }) => theme.colors.gray_800};
-        font-size: 4.2rem;
-        font-weight: 500;
+        font-size: 3.75rem;
+        font-weight: 700;
       }
 
       p {
@@ -209,7 +207,7 @@ const Hero = styled.section`
   }
 
   .image-background {
-    width: 60%;
+    width: 50%;
     height: 100%;
     background-image: url(${HeroImg});
     background-size: cover;
@@ -217,7 +215,7 @@ const Hero = styled.section`
   }
 
   .title-and-subtitle {
-    width: 40%;
+    width: 50%;
     height: 100%;
     background: linear-gradient(186deg, #e7e7e9 12.97%, #e0dfe4 92.09%);
     display: flex;
@@ -231,8 +229,8 @@ const Hero = styled.section`
 
       h1 {
         color: ${({ theme }) => theme.colors.gray_800};
-        font-size: 4.5rem;
-        font-weight: 500;
+        font-size: 3.75rem;
+        font-weight: 700;
       }
 
       p {

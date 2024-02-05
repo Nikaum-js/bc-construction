@@ -27,7 +27,7 @@ import theme from './global/styles/theme'
 
 export function App() {
   const [showMenu, setShowMenu] = useState(false)
-  const hideBackground = window.innerWidth < 1420
+  const hideBackground = window.innerWidth < 1260
 
   return (
     <ThemeProvider theme={theme}>
